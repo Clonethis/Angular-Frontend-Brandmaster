@@ -34,13 +34,7 @@ this.rows.push(
   onRemove(id: number){
     console.log("rows:",this.rows);
     console.log("removed pos: ",id);
-let index =this.rows.find((element)=>{
-    console.log(element)
-      return element.id;
-    
-      })
-      console.log(index)
-    // this.rows.splice(index,1)
+    this.rows.splice(id,1)
     console.log("rowsAfter:",this.rows);
   }
 }
