@@ -7,7 +7,7 @@
 
 
 .asymetric {
-    width: 20vw;
+    width: 100%;
 }
 
 .top-bar {
@@ -16,37 +16,105 @@
 }
 
 .top-bar .menu {
+    /* margin-top: 2rem; */
+        padding-top: 2rem;
     color: #242b39;
+width: min-content;
+    border-bottom: 2px solid var(--converse-color);
+    height: 93%;
 }
 
 .main-content {
     padding: 1.1rem var(--basic-padding);
     height: 70%;
     border-top: 1px solid #e1e1e1;
-
-    border-bottom: 1px solid #e1e1e1;
+    margin: 0.6rem;
+        border-bottom: 1px solid #e1e1e1;
 
 }
 
-.main-content:nth-child(n) {
-    margin: 0.6rem;
-    border-top: 1px solid #e1e1e1;
+.main-content input {
+    width: 60%;
+}
 
+.main-content .subsection,
+.main-content .section-display {
+    padding: 0.5rem 0;
+    /* border-top: 1px solid #e1e1e1; */
     border-bottom: 1px solid #e1e1e1;
+}
+.main-content .section-display .title {
+    padding-bottom: 0.8rem;
+    font-size: 0.7rem;
+}
+
+.main-content .subsection .title {
+    font-size: 0.6rem;
+    padding-bottom: 0.8rem;
 }
 
 .picker {}
 
+.subsection .side-table {
+    display: block;
+}
+
+.subsection .side-table .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.3rem;
+}
+
+.subsection .side-table .row .title {
+    font-size: 0.7rem;
+    font-weight: normal;
+
+}
+
+/* other section - table  */
+.main-content .section-display input,
+.load-table {
+    border: #a3a7ab 1px solid;
+    border-radius: 4px;
+
+}
+
+.load-table .row {
+    padding: 0.3rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.load-table .row .title {
+    padding-bottom: 0rem;
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+.load-table #top.row {
+    background-color: #d6d8da;
+    color: #242b39;
+}
+
+.load-table,
+.subsection input {
+    border: 1px solid #e2e7ee;
+    border-radius: 4px;
+}
+
+.load-table .row input {
+    width: 12%;
+}
 .bottom-button {
-    margin-top: auto;
-    height: 10%;
+/* height: 10%; */
     background-color: var(--converse-color);
     border-radius: 5px;
     width: 90%;
     color: #fff;
     margin: 0.3rem auto;
-    padding-top: auto;
-    padding-top: 0.7rem;
+    height: 7%;
     /* padding-top: 3.2%; */
     text-align: center;
     /* border-top: 3px solid #e1e1e1; */
@@ -61,12 +129,6 @@
     margin-bottom: - 3rem;
     margin-bottom: 0.4rem; */
 /* } */
-.full-line {
-
-    width: 100%;
-    border-bottom: 1px solid #e1e1e1;
-}
-
 /* .section-display
     .title
 
