@@ -1,0 +1,54 @@
+.app-display {
+    font-family: "Poppins";
+    /* background-color: #f00; */
+    width: calc(100% - 27%);
+    margin: auto;
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+.heading-light {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #9fa7bb;
+
+}
+
+
+.heading {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-top: -0.9rem;
+    margin-bottom: 2rem;
+    color: #232323;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 31.62%);
+
+    /* grid-row: auto; */
+    column-gap: 2.56%;
+    row-gap: 4%;
+
+}
+
+
+.asymetric-grid {}
+
+.grid .block {
+    /* border: solid 2px blue; */
+    /* width: calc(100% - 10%); */
+    /* width: 370px; */
+    aspect-ratio: 1/1;
+    height: auto;
+    color: #fff;
+    background-color: #fab;
+    /* height: 370px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+}

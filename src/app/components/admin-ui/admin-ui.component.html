@@ -1,0 +1,84 @@
+<div class="">
+
+    <app-display itemToDisplay="rows"></app-display>
+</div>
+<div class="admin-layout">
+  <div class="tick">
+    <img
+      src="../../../assets/images/icon-admin-iconset-cross-small.svg"
+      alt="close window"
+      srcset=""
+    />
+  </div>
+  <div class="sidebar">
+    <h2>Nice</h2>
+  </div>
+  <div class="main">
+    <div class="top-bar">
+      <div class="title">Tiles</div>
+      <button class="add-button" (click)="onAdd()">
+        <img src="../../../assets/images/icon-admin-iconset-plus.svg" alt="" />
+
+        Add
+      </button>
+    </div>
+
+    <div class="admin-table">
+      <!-- heading of admin table -->
+      <div class="description-bar">
+        <div class="icon left">
+          <img
+            src="../../../assets/images/icon-bb-iconset-arrange-down.svg"
+            alt=""
+          />
+        </div>
+        <div class="text-span background-picker">Bg</div>
+        <div class="text-span">Text</div>
+        <div class="text-span">Link</div>
+        <div class="icon right">
+          <img
+            src="../../../assets/images/icon-admin-iconset-triangle-down-small.svg"
+            alt=""
+          />
+        </div>
+      </div>
+      <!-- Content -->
+      <div class="content-bar" *ngFor="let row of rows">
+        <div class="item">
+          <img
+            src="../../../assets/images/icon-bb-iconset-move-simple.svg"
+            alt=""
+          />
+        </div>
+        <!-- <div class="drop-down"></div> -->
+        <div class="item background-picker">
+          <img
+            src="../../../assets/images/icon-bb-iconset-move-simple.svg"
+            alt=""
+          />
+        </div>
+        <div class="text-field">
+          <!-- [(ngModel)]="hero.name" -->
+          <input id="hero-name" placeholder="name" [value]="row.name" />
+        </div>
+        <div class="text-field">
+          <!-- [(ngModel)]="hero.name" -->
+          <input id="hero-name" placeholder="name" />
+        </div>
+
+        <div class="icon right" (click)="onRemove(this.row.id)" id="before-last">
+          <img
+            src="../../../assets/images/icon-bb-iconset-move-simple.svg"
+            alt=""
+          />
+        </div>
+        <div class="icon right" id="last">
+          <img
+            src="../../../assets/images/icon-bb-iconset-move-simple.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
