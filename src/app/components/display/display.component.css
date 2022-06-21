@@ -1,10 +1,13 @@
 .app-display {
     font-family: "Poppins";
     /* background-color: #f00; */
+    display: block;
     width: calc(100% - 27%);
     margin: auto;
     text-align: center;
     padding-bottom: 4rem;
+    height: fit-content;
+        margin-bottom: 8rem;
 }
 
 .heading-light {
@@ -43,7 +46,7 @@
     aspect-ratio: 1/1;
     height: auto;
     color: #fff;
-    background-color: #fab;
+
     /* height: 370px; */
     display: flex;
     justify-content: center;
@@ -51,4 +54,13 @@
     font-weight: 500;
     font-size: 1.2rem;
     flex-wrap: wrap;
+    transition-duration: 0.3s;
+    }
+    
+    .grid a .block:hover {
+        transform: scale(1.02);
+    }
+    
+    a:link {
+        text-decoration: none;
 }

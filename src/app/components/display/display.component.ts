@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Input, OnInit } from '@angular/core';
+import { Row } from 'src/app/tiles';
+import {DataRows} from '../../data';
 @Component({
   selector: 'app-display',
   templateUrl: './display.component.html',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayComponent implements OnInit {
 
-  constructor() { }
+  @Input() items:Row[]=DataRows;
+  constructor() { 
 
+  }
   ngOnInit(): void {
   }
 

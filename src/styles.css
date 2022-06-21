@@ -9,9 +9,11 @@ body {
 *::after,
 *::before {
     box-sizing: border-box;
+    transition-duration: 0.3s;
 }
 
 :root {
     --title-font-size: 0.95rem;
     --converse-color: #407cff;
+
 }

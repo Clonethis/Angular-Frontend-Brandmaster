@@ -1,6 +1,4 @@
 <div class="">
-
-    <app-display itemToDisplay="rows"></app-display>
 </div>
 <div class="admin-layout">
   <div class="tick">
@@ -10,12 +8,17 @@
       srcset=""
     />
   </div>
+  <!-- left options side -->
   <div class="sidebar">
-    <h2>Nice</h2>
+
+    <app-sidebar></app-sidebar>
   </div>
+
+  <!-- main content side -->
   <div class="main">
     <div class="top-bar">
       <div class="title">Tiles</div>
+      <!-- Adds element to Content list -->
       <button class="add-button" (click)="onAdd()">
         <img src="../../../assets/images/icon-admin-iconset-plus.svg" alt="" />
 
@@ -27,10 +30,14 @@
       <!-- heading of admin table -->
       <div class="description-bar">
         <div class="icon left">
-          <img
+
+
+            <img
             src="../../../assets/images/icon-bb-iconset-arrange-down.svg"
             alt=""
-          />
+            />
+
+
         </div>
         <div class="text-span background-picker">Bg</div>
         <div class="text-span">Text</div>
@@ -59,25 +66,48 @@
         </div>
         <div class="text-field">
           <!-- [(ngModel)]="hero.name" -->
-          <input id="hero-name" placeholder="name" [value]="row.name" />
+          <input type="text" id="hero-name" [(ngModel)]="row.name" />
         </div>
         <div class="text-field">
           <!-- [(ngModel)]="hero.name" -->
-          <input id="hero-name" placeholder="name" />
+          <input id="hero-name" [(ngModel)]="row.link" placeholder="name" />
         </div>
-
+<!-- On click removes current element -->
         <div class="icon right" (click)="onRemove(i)" id="before-last">
           <img
-            src="../../../assets/images/icon-bb-iconset-move-simple.svg"
+            src="../../../assets/images/icon-bb-iconset-remove.svg"
             alt=""
           />
         </div>
-        <div class="icon right" id="last">
-          <img
+        <!-- other popup -->
+
+
+          <div class="icon right" id="last">
+            <img
             src="../../../assets/images/icon-bb-iconset-move-simple.svg"
-            alt=""
-          />
-        </div>
+            alt="more options"
+            />
+            <div class="dropdown">
+              <div class="dropdown-content">
+                
+                <div class="item">
+                  <img
+                  src="../../../assets/images/icon-bb-iconset-move-simple.svg"
+                  alt="more options"
+                  />                  Assets in DAM
+                </div>
+                <div class="item">
+                  <img
+                  src="../../../assets/images/icon-admin-iconset-plus-gray.svg"
+                  alt="more options"
+                  />  
+                  
+                  More options</div>
+              </div>
+            </div>
+            
+          </div>
+
       </div>
     </div>
   </div>

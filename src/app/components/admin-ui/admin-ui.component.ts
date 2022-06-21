@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { find } from 'rxjs';
+import { DataRows } from 'src/app/data';
+import { Row } from 'src/app/tiles';
 
 @Component({
   selector: 'app-admin-ui',
@@ -8,15 +10,9 @@ import { find } from 'rxjs';
 })
 export class AdminUiComponent implements OnInit {
   constructor() { }
+// @Input('ngModel')row?:Row;
 
-  rows = [
-    {id :0,name:"nice3",background:"../../../assets/images/icon-admin-iconset-cross-small.svg"},
-    {id :1,name:"nice32",background:"../../../assets/images/icon-admin-iconset-cross-small.svg"},
-    {id :2,name:"nice33",background:"../../../assets/images/icon-admin-iconset-cross-small.svg"},
-    {id :3,name:"nice34",background:"../../../assets/images/icon-admin-iconset-cross-small.svg"},
-    {id :4,name:"nice3123",background:"../../../assets/images/icon-admin-iconset-cross-small.svg"},
-    {id :5,name:"nice312312",background:"../../../assets/images/icon-admin-iconset-cross-small.svg"}
-    ];
+   rows: Row[]= DataRows;
     id=this.rows.length;
   ngOnInit(): void {
   }
@@ -26,15 +22,28 @@ export class AdminUiComponent implements OnInit {
 this.rows.push(
   {
     id:this.id,
+    link:"https://www.brandmaster.com",
+    bgShow:false,
+    otherShow:false,
     name:"New nice "+ this.id,
-    background:"#fab"
+    background:"#33f"
   }
 )
+
+
   }
   onRemove(id: number){
     console.log("rows:",this.rows);
     console.log("removed pos: ",id);
     this.rows.splice(id,1)
     console.log("rowsAfter:",this.rows);
+  }
+  toggleDisplay(id:number) {
+    for(let row of this.rows){
+      row.bgShow=false;
+      row.otherShow=false;
+    }
+    this.rows[id].bgShow = !this.rows[id].bgShow;
+
   }
 }
